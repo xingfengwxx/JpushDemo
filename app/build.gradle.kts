@@ -21,7 +21,7 @@ android {
         // Engagelab 推送配置
         manifestPlaceholders.putAll(mapOf(
             // appKey，需要与控制台上的一样，与packageName是一对一关系
-            "ENGAGELAB_PRIVATES_APPKEY" to "您的appkey",
+            "ENGAGELAB_PRIVATES_APPKEY" to "e40b783a019f4bf586a7bb53",
             // Engagelab appChannel，用于渠道统计
             "ENGAGELAB_PRIVATES_CHANNEL" to "developer",
             // Engagelab process，Engagelab sdk工作所在的进程，注意:开头
