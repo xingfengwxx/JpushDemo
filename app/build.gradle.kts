@@ -17,6 +17,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Engagelab 推送配置
+        manifestPlaceholders.putAll(mapOf(
+            // appKey，需要与控制台上的一样，与packageName是一对一关系
+            "ENGAGELAB_PRIVATES_APPKEY" to "您的appkey",
+            // Engagelab appChannel，用于渠道统计
+            "ENGAGELAB_PRIVATES_CHANNEL" to "developer",
+            // Engagelab process，Engagelab sdk工作所在的进程，注意:开头
+            "ENGAGELAB_PRIVATES_PROCESS" to ":remote"
+        ))
     }
 
     buildTypes {
@@ -38,6 +48,9 @@ android {
 }
 
 dependencies {
+    // Engagelab 推送 SDK
+    implementation("com.engagelab:engagelab:4.3.9") // 必须 主包
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
